@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karani's Portfolio</title>
+    <link rel="icon" type="image/png" href="resources/portfolio.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome is already linked in the provided code -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio.css">
+
+    <style>
+        
+        
+    </style>
+</head>
+<body>
+    <!-- Transparent Header -->
+    <header class="header" id="header">
+        <div class="flex justify-between items-center max-w-7xl mx-auto">
+            <div class="text-xl font-bold code-font">Ian<span class="text-blue-400">.</span>Karani</div>
+            <nav class="nav-links">
+                <a href="#summary">Summary</a> 
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#" onclick="toggleModal(true); return false;">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <!-- Profile Photo Trigger -->
+            <div class="profile-photo-container mx-auto lg:mx-0" onclick="toggleModal(true)">
+                <!-- Updated placeholder text for Ian Karani -->
+                <img src="resources/karani.jpg" alt="Profile Picture" class="w-full h-full object-cover"/>
+            </div>
+            
+            <div class="hero-badge">Backend Developer & AI Specialist</div>
+            <h1 class="hero-title">Transforming Ideas into Scalable Solutions</h1>
+            <p class="hero-subtitle">
+                Specializing in Python, FastAPI, LLM integration, and microservices architecture. 
+                Building intelligent systems that solve real-world problems.
+            </p>
+            <div class="flex gap-4 mt-8">
+                <a href="#projects" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all">
+                    View Projects
+                </a>
+                <button onclick="toggleModal(true)" class="border-2 border-blue-500 text-blue-500 px-8 py-3 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all">
+                    Contact Me
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Summary Section (New Addition) -->
+    <section class="summary-section" id="summary">
+        <div class="summary-card animate-fade-in-up">
+            <h2 class="text-2xl font-bold mb-4 text-white text-center">Professional Summary</h2>
+            <p class="summary-text text-center">
+                An upcoming  Software Engineer and AI Specialist with <span class="summary-highlight">2+ years of experience</span> focused on designing and deploying scalable, high-performance systems. Core expertise lies in leveraging <span class="summary-highlight">Python (FastAPI)</span> and **C# (.NET)** for developing robust APIs and microservices. Proven ability to integrate <span class="summary-highlight">Large Language Models (LLMs)</span> and implement **RAG pipelines** to build intelligent, production-ready applications.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section" id="skills">
+        <h2 class="section-title">Technical Expertise</h2>
+        <div class="skills-grid">
+            <!-- Python -->
+            <div class="skill-card animate-fade-in-up">
+                <div class="skill-icon">
+                    <i class="fab fa-python"></i>
+                </div>
+                <h3 class="skill-name">Python Development</h3>
+                <p class="skill-desc">
+                    Expert in Python programming, data analysis, automation, and building robust backend systems with modern frameworkslike.
+                </p>
+            </div>
+
+            <!-- FastAPI -->
+            <div class="skill-card animate-fade-in-up delay-100">
+                <div class="skill-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3 class="skill-name">FastAPI</h3>
+                <p class="skill-desc">
+                    Building high-performance REST APIs with automatic documentation, validation, and async capabilities.
+                </p>
+            </div>
+
+            <!-- SQL -->
+            <div class="skill-card animate-fade-in-up delay-200">
+                <div class="skill-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3 class="skill-name">SQL Databases</h3>
+                <p class="skill-desc">
+                    Database design, optimization, and management with PostgreSQL, MySQL, and SQL Server.
+                </p>
+            </div>
+
+            <!-- C# -->
+            <div class="skill-card animate-fade-in-up delay-300">
+                <div class="skill-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3 class="skill-name">C# & .NET</h3>
+                <p class="skill-desc">
+                    Enterprise application development with C#, .NET Core, and ASP.NET for scalable solutions.
+                </p>
+            </div>
+
+            <!-- LLM -->
+            <div class="skill-card animate-fade-in-up delay-400">
+                <div class="skill-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3 class="skill-name">LLM Integration</h3>
+                <p class="skill-desc">
+                    Implementing Large Language Models, AI chatbots, and intelligent automation systems.
+                </p>
+            </div>
+
+            <!-- APIs -->
+            <div class="skill-card animate-fade-in-up delay-500">
+                <div class="skill-icon">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <h3 class="skill-name">API Design</h3>
+                <p class="skill-desc">
+                    RESTful and GraphQL API design, documentation, and integration with third-party services.
+                </p>
+            </div>
+
+            <!-- Microservices -->
+            <div class="skill-card animate-fade-in-up delay-100">
+                <div class="skill-icon">
+                    <i class="fas fa-cubes"></i>
+                </div>
+                <h3 class="skill-name">Microservices</h3>
+                <p class="skill-desc">
+                    Distributed systems architecture, containerization, and orchestration with Docker and Kubernetes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            
+            <!-- Project 1: Local Simple Chatbot -->
+            <div class="project-card animate-fade-in-up">
+                <div class="project-image">
+                    <i class="fas fa-robot text-5xl opacity-50"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">1. Local Simple Chatbot</h3>
+                    <p class="project-desc">
+                        A privacy-focused chatbot powered by the **local Mistral model**, enabling offline conversations and custom AI interactions.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Mistral</span>
+                        <span class="tech-tag">Local LLM</span>
+                    </div>
+                    <a href="https://github.com/karanimwarimu/simplerawchatbot" target="_blank" class="project-link">
+                        View Code <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 2: AI Username Suggestor -->
+            <div class="project-card animate-fade-in-up delay-100">
+                <div class="project-image">
+                    <i class="fas fa-lightbulb text-5xl opacity-50"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">2. AI Username Suggestor</h3>
+                    <p class="project-desc">
+                        An AI tool that suggests cool, creative, and available usernames to enhance the user signup experience.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">LLM</span>
+                        <span class="tech-tag">Python</span>
+                    </div>
+                    <a href="https://github.com/karanimwarimu/Signupsuggestor" target="_blank" class="project-link">
+                        View Code <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 3: Full RAG Pipeline -->
+            <div class="project-card animate-fade-in-up delay-200">
+                <div class="project-image">
+                    <i class="fas fa-file-invoice text-5xl opacity-50"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">3. Full RAG Pipeline & Chat</h3>
+                    <p class="project-desc">
+                        A complete **Retrieval-Augmented Generation (RAG)** system with a document uploader and chat interface, using a local model for grounded Q&A.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">RAG</span>
+                        <span class="tech-tag">VectorDB</span>
+                        <span class="tech-tag">Local LLM</span>
+                    </div>
+                    <a href="https://github.com/yourusername/full-rag-pipeline" target="_blank" class="project-link">
+                        View Code <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 4: ASP.NET Core Web Page -->
+            <div class="project-card animate-fade-in-up delay-300">
+                <div class="project-image">
+                    <i class="fas fa-globe text-5xl opacity-50"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">4. ASP.NET Core Web Page</h3>
+                    <p class="project-desc">
+                        Implementation of a simple, modern web application's front-end and back-end logic using the **ASP.NET Core framework** in C#.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">ASP.NET</span>
+                        <span class="tech-tag">Frontend</span>
+                    </div>
+                    <a href="https://github.com/yourusername/aspnet-simple-site" target="_blank" class="project-link">
+                        View Code <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 5: Bulk SMS Sender -->
+            <div class="project-card animate-fade-in-up delay-400">
+                <div class="project-image">
+                    <i class="fas fa-paper-plane text-5xl opacity-50"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">5. Bulk SMS Sender Service</h3>
+                    <p class="project-desc">
+                        A robust microservice using **FastAPI** to handle mass text messaging requests, integrated with a third-party SMS API for delivery.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">Microservice</span>
+                        <span class="tech-tag">Messaging API</span>
+                    </div>
+                    <a href="https://github.com/karanimwarimu/simple-sendbulksmsapp" target="_blank" class="project-link">
+                        View Code <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 6: M-Pesa Transactions Handler -->
+            <div class="project-card animate-fade-in-up delay-500">
+                <div class="project-image">
+                    <i class="fas fa-money-check-alt text-5xl opacity-50"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">6. M-Pesa Transactions Handler</h3>
+                    <p class="project-desc">
+                        A secure backend solution using **FastAPI** to process mobile money transactions via the **M-Pesa Daraja API** webhook integration.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">M-Pesa Daraja</span>
+                        <span class="tech-tag">Webhooks</span>
+                    </div>
+                    <a href="https://github.com/yourusername/mpesa-handler" target="_blank" class="project-link">
+                        View Code <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- General GitHub Link Section -->
+    <section class="github-link-section">
+        <h3 class="text-xl font-semibold mb-4 text-white">Explore My Full Repository</h3>
+        <a href="https://github.com/karanimwarimu" target="_blank" class="github-link">
+            <i class="fab fa-github mr-2"></i> Your Complete GitHub Profile
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 text-center text-sm border-t border-gray-800 bg-gray-900 text-gray-400">
+        &copy; 2025 Ian Karani. 254
+    </footer>
+
+    <!-- Contact Modal (Initially Hidden) -->
+    <div id="contactModal" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-4 hidden" onclick="toggleModal(false)">
+        <div class="modal-content max-w-lg w-full transform transition-all overflow-hidden" onclick="event.stopPropagation()">
+            <div class="relative">
+                <!-- Close Button -->
+                <button onclick="toggleModal(false)" class="absolute top-4 right-4 text-white hover:text-gray-300 focus:outline-none transition duration-150 p-2 rounded-full bg-gray-700/50 hover:bg-gray-700">
+                    <i class="fas fa-times w-5 h-5"></i>
+                </button>
+
+                <!-- Modal Content Header (Profile Picture) -->
+                <div class="modal-header p-8 flex flex-col items-center justify-center rounded-t-xl">
+                    <div class="w-24 h-24 rounded-full bg-white border-4 border-indigo-200 overflow-hidden shadow-xl">
+                        <!-- Updated placeholder text for Ian Karani -->
+                        <img src="resources/karani.jpg" alt="Profile Photo" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Updated Name -->
+                    <h3 class="text-2xl font-bold text-white mt-4">Ian Karani</h3>
+                    <p class="text-indigo-200 text-sm">AI/ML & Backend Developer</p>
+                </div>
+
+                <!-- Modal Content Body -->
+                <div class="p-8">
+                    <h4 class="text-xl font-bold text-center mb-6 text-white border-b border-gray-700 pb-2">
+                        Get In Touch
+                    </h4>
+                    <div class="space-y-4 contact-info">
+                        <!-- Email -->
+                        <div class="flex items-center text-gray-300 contact-detail">
+                            <i class="fas fa-envelope w-6 h-6 mr-3 text-purple-400"></i>
+                            <span class="font-semibold mr-3">Email:</span>
+                            <a href="mailto:your.ianmwarimu4@gmail.com" class="hover:underline">ianmwarimu4@gmail.com</a>
+                        </div>
+                        <!-- Telephone -->
+                        <div class="flex items-center text-gray-300 contact-detail">
+                            <i class="fas fa-phone w-6 h-6 mr-3 text-purple-400"></i>
+                            <span class="font-semibold mr-3">Tel:</span>
+                            <a href="tel:+254717783955" class="hover:underline">+254 717783955</a>
+                             <a href="tel:+254759711993" class="hover:underline">  +254 759711993</a>
+                        </div>
+                        <!-- GitHub -->
+                        <div class="flex items-center text-gray-300 contact-detail">
+                            <i class="fab fa-github w-6 h-6 mr-3 text-purple-400"></i>
+                            <span class="font-semibold mr-3">GitHub:</span>
+                            <a href="https://github.com/karanimwarimu" target="_blank" class="hover:underline">@karanimwarimu</a>
+                        </div>
+                        <!-- LinkedIn -->
+                        <div class="flex items-center text-gray-300 contact-detail">
+                            <i class="fab fa-linkedin w-6 h-6 mr-3 text-purple-400"></i>
+                            <span class="font-semibold mr-3">LinkedIn:</span>
+                            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="hover:underline">IanMwarimu</a>
+                        </div>
+                        <!-- Twitter/X -->
+                        <div class="flex items-center text-gray-300 contact-detail">
+                            <i class="fab fa-twitter w-6 h-6 mr-3 text-purple-400"></i>
+                            <span class="font-semibold mr-3">X (Twitter):</span>
+                            <a href="https://x.com/senseikarani" target="_blank" class="hover:underline">@senseikarani</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for the modal functionality
+        const contactModal = document.getElementById('contactModal');
+
+        // Function to show or hide the modal
+        function toggleModal(show) {
+            if (show) {
+                contactModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling background
+            } else {
+                contactModal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Close modal when clicking outside of it (handled by onclick on the backdrop)
+        
+        // Close modal on escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && !contactModal.classList.contains('hidden')) {
+                toggleModal(false);
+            }
+        });
+
+        // Sticky header logic
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Initial check for animations
+        document.querySelectorAll('.animate-fade-in-up').forEach(el => el.style.opacity = 0);
+        
+        // Simple Intersection Observer to trigger animations on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.classList.add('animate-fade-in-up-active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate-fade-in-up').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
